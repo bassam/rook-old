@@ -29,6 +29,7 @@ type cephGlobalConfig struct {
 	MonMembers               string `ini:"mon initial members,omitempty"`
 	LogFile                  string `ini:"log file,omitempty"`
 	MonClusterLogFile        string `ini:"mon cluster log file,omitempty"`
+	MonKeyValueDb            string `ini:"mon keyvaluedb"`
 	DebugLogDefaultLevel     int    `ini:"debug default"`
 	DebugLogRadosLevel       int    `ini:"debug rados"`
 	DebugLogMonLevel         int    `ini:"debug mon"`
@@ -180,6 +181,7 @@ func createDefaultCephConfig(cluster *ClusterInfo, runDir string, debug, bluesto
 			MonMembers:             strings.Join(monMembers, " "),
 			LogFile:                "/dev/stdout",
 			MonClusterLogFile:      "/dev/stdout",
+			MonKeyValueDb:          "rocksdb",
 			DebugLogDefaultLevel:   loggingLevel,
 			DebugLogRadosLevel:     loggingLevel,
 			DebugLogMonLevel:       loggingLevel,
