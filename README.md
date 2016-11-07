@@ -52,7 +52,7 @@ hypervisor, or directly on the host on most Linux distributions.
 
 `rookd` uses an embedded version of Ceph for storing all data -- there are no changes to the data path. An embedded version
 of Ceph was created specifically for Rook scenarios and has been pushed upstream. Rook does attempt to maintain full fidelity
-with Ceph, for example, most of the Ceph concepts like OSDs, MONs, placement groups, etc. are hiddent. Instead Rook creates
+with Ceph, for example, most of the Ceph concepts like OSDs, MONs, placement groups, etc. are hidden. Instead Rook creates
 a much simplified UX for admins that is in terms of physical resources, pools, volumes, filesystems, and buckets.
 
 `rookd` embeds Etcd within the cluster store configuration, and coordinate cluster-wide management operations. `rookd` will automatically
